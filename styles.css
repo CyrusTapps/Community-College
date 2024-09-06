@@ -140,12 +140,12 @@ p {
     width: 12px;
 }
 
-#sectionB {
+aside {
     width: 25%;
     height: 100%;
 }
 
-#sectionB:hover {
+aside:hover {
     background-color: var(--color-hov1);
 }
 
@@ -160,8 +160,7 @@ nav {
 nav:hover {
     background-color: var(--color-hov1);
 }
-
-li {
+.btn {
     background: var(--color-ter);
     width: 60%;
     height: 60px;
@@ -174,7 +173,7 @@ li {
 }
 
 @media (max-width: 999px) {
-    li {
+    .btn {
         width: 100px;
         margin-left: 0;
     }
@@ -194,3 +193,4 @@ li {
     font-size: 10px;
     margin-left: 1%;
 }
+
