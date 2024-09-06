@@ -1,0 +1,107 @@
+:root {}
+
+
+
+
+
+
+
+.josefin-slab-heading {
+    font-family: "Josefin Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.lora-text {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background: #61293c;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    width: 99%;
+    height: 20%;
+    background-color: #d6d6d6;
+    border-top: 3px solid #61293c;
+    border-bottom: 3px solid #61293c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.logo {
+    width: 9%;
+    height: auto;
+    margin-left: 2%;
+    margin-right: 10%;
+}
+
+h1 {
+    font-family: "Josefin Slab", serif;
+    font-size: 3vw;
+    color: #61293c;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+
+.space {
+    width: 11%;
+    height: 100%;
+    background-color: #d6d6d6;
+    margin-left: 10%;
+    margin-right: 2%;
+}
+
+@media (max-width: 999px) {
+
+    .logo,
+    .space {
+        display: none;
+    }
+}
+
+@media (max-width: 999px) {
+    h1 {
+        font-size: 4vw;
+    }
+}
+
+.main {
+    width: 99%;
+    height: 71%;
+    background-color: #d6d6d6;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer {
+    width: 99%;
+    height: 8%;
+    background-color: #d6d6d6;
+    border-top: 3px solid #61293c;
+}
