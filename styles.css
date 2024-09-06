@@ -163,7 +163,8 @@ nav:hover {
     background-color: var(--color-hov1);
 }
 
-.btn {
+
+.navlist a {
     background: var(--color-ter);
     width: 60%;
     height: 60px;
@@ -175,25 +176,26 @@ nav:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+}
+
+.navlist a li {
     font-family: "Josefin Slab", serif;
     font-size: x-large;
     color: var(--color-pri);
     font-weight: 700;
-
+}
+.navlist a:hover{
+background: var(--color-pri);
+border: 2px solid var(--color-acc);
+transform: scale(1.08);
+transition: .2s;
 }
 
-.btnlink {
-    text-decoration: none;
+.navlist a:hover li{
+    color: var(--color-hov2)
 }
 
-.btn:hover {
-    background: var(--color-pri);
-    color: var(--color-sec);
-    border: 2px solid var(--color-acc);
-    cursor: pointer;
-    transform: scale(1.05);
-
-}
 
 @media (max-width: 999px) {
     .btn {
