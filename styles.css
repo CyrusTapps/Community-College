@@ -145,10 +145,44 @@ p {
 aside {
     width: 25%;
     height: 100%;
+    padding: 10px;
 }
 
 aside:hover {
     background-color: var(--color-hov1);
+}
+
+aside ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+aside a li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+aside a li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background: url(./assets/bullet-2.png) no-repeat center center;
+    background-size: contain;
+}
+
+
+aside a,
+aside a li {
+    color: var(--color-pri);
+    font-family: "Josefin Slab", serif;
+    font-size: 2rem;
+    font-weight: 500;
+    
 }
 
 nav {
@@ -157,6 +191,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: scroll;
 }
 
 nav:hover {
@@ -185,14 +220,15 @@ nav:hover {
     color: var(--color-pri);
     font-weight: 700;
 }
-.navlist a:hover{
-background: var(--color-pri);
-border: 2px solid var(--color-acc);
-transform: scale(1.08);
-transition: .2s;
+
+.navlist a:hover {
+    background: var(--color-pri);
+    border: 2px solid var(--color-acc);
+    transform: scale(1.08);
+    transition: .2s;
 }
 
-.navlist a:hover li{
+.navlist a:hover li {
     color: var(--color-hov2)
 }
 
@@ -202,7 +238,25 @@ transition: .2s;
         width: 100px;
         margin-left: 0;
     }
+
+    .navlist a li {
+        font-size: 20px;
+    }
 }
+
+@media (max-width:900px) {
+    .navlist a li {
+        font-size: 15px;
+    }
+}
+
+@media (max-width:650px) {
+    .navlist a li {
+        font-size: 10px;
+    }
+}
+
+
 
 .footer {
     width: 99%;
