@@ -4,6 +4,7 @@
     --color-ter: #FFFFFF;
     --color-acc: #000000;
     --color-hov1: #e7e7e7;
+    --color-hov2: #ffffffc5;
 }
 
 .josefin-slab-heading {
@@ -91,6 +92,7 @@ p {
     font-weight: 800;
     line-height: 1.5;
     letter-spacing: 2px;
+    color: var(--color-acc);
 }
 
 @media (max-width: 999px) {
@@ -160,6 +162,7 @@ nav {
 nav:hover {
     background-color: var(--color-hov1);
 }
+
 .btn {
     background: var(--color-ter);
     width: 60%;
@@ -169,6 +172,26 @@ nav:hover {
     list-style: none;
     border: 2px solid var(--color-pri);
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Josefin Slab", serif;
+    font-size: x-large;
+    color: var(--color-pri);
+    font-weight: 700;
+
+}
+
+.btnlink {
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: var(--color-pri);
+    color: var(--color-sec);
+    border: 2px solid var(--color-acc);
+    cursor: pointer;
+    transform: scale(1.05);
 
 }
 
@@ -193,4 +216,3 @@ nav:hover {
     font-size: 10px;
     margin-left: 1%;
 }
-
