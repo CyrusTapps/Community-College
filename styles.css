@@ -1,10 +1,10 @@
-:root {}
-
-
-
-
-
-
+:root {
+    --color-pri: #61293c;
+    --color-sec: #d6d6d6;
+    --color-ter: #FFFFFF;
+    --color-acc: #000000;
+    --color-hov1: #e7e7e7;
+}
 
 .josefin-slab-heading {
     font-family: "Josefin Slab", serif;
@@ -16,12 +16,16 @@
 .lora-text {
     font-family: "Lora", serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
 }
 
+* {
+    font-size: 10px;
+}
+
 body {
-    background: #61293c;
+    background: var(--color-pri);
     margin: 0;
     padding: 0;
     width: 100vw;
@@ -43,9 +47,9 @@ body {
 .header {
     width: 99%;
     height: 20%;
-    background-color: #d6d6d6;
-    border-top: 3px solid #61293c;
-    border-bottom: 3px solid #61293c;
+    background-color: var(--color-sec);
+    border-top: 3px solid var(--color-pri);
+    border-bottom: 3px solid var(--color-pri);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,7 +66,7 @@ body {
 h1 {
     font-family: "Josefin Slab", serif;
     font-size: 3vw;
-    color: #61293c;
+    color: var(--color-pri);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     padding-left: 10%;
     padding-right: 10%;
@@ -72,9 +76,21 @@ h1 {
 .space {
     width: 11%;
     height: 100%;
-    background-color: #d6d6d6;
+    background-color: var(--color-sec);
     margin-left: 10%;
     margin-right: 2%;
+}
+
+h2 {
+    font-family: "Josefin Slab", serif;
+    font-size: 2vw;
+}
+
+p {
+    font-family: "Lora", serif;
+    font-weight: 800;
+    line-height: 1.5;
+    letter-spacing: 2px;
 }
 
 @media (max-width: 999px) {
@@ -83,25 +99,98 @@ h1 {
     .space {
         display: none;
     }
-}
 
-@media (max-width: 999px) {
     h1 {
-        font-size: 4vw;
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
     }
 }
+
+
+
 
 .main {
     width: 99%;
     height: 71%;
-    background-color: #d6d6d6;
+    background-color: var(--color-sec);
     display: flex;
     flex-direction: row;
+}
+
+
+#sectionA {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-sec);
+    padding: 10px;
+    overflow: scroll;
+}
+
+#sectionA:hover {
+    background-color: var(--color-hov1);
+}
+
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+#sectionB {
+    width: 25%;
+    height: 100%;
+}
+
+#sectionB:hover {
+    background-color: var(--color-hov1);
+}
+
+nav {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav:hover {
+    background-color: var(--color-hov1);
+}
+
+li {
+    background: var(--color-ter);
+    width: 60%;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 15%;
+    list-style: none;
+    border: 2px solid var(--color-pri);
+    border-radius: 10px;
+
+}
+
+@media (max-width: 999px) {
+    li {
+        width: 100px;
+        margin-left: 0;
+    }
 }
 
 .footer {
     width: 99%;
     height: 8%;
-    background-color: #d6d6d6;
-    border-top: 3px solid #61293c;
+    background-color: var(--color-sec);
+    border-top: 3px solid var(--color-pri);
+    display: flex;
+    align-items: center;
+}
+
+.copy {
+    font-family: "Lora", serif;
+    font-size: 10px;
+    margin-left: 1%;
 }
