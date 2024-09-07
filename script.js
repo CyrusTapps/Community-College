@@ -4,10 +4,10 @@ const weatherIcon = document.getElementById("weather-icon");
 const city = "Nashville";
     
 async function checkWeather(city) {
-    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+    const response = await fetch("https://api.openweathermap.org/data/2.5/weather?units=imperial&q=nashville&appid=" + `${apiKey}`);
 
 
-    if (response.status == 404 || response.status == 401) {
+    if (response.status == 404 || response.status == 401 || response.status == 400) {
         document.getElementById("temp").textContent = "Error";
         document.getElementById("wind").textContent = "Error";
     } else {
