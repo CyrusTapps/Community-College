@@ -14,7 +14,7 @@ async function checkWeather(city) {
 
         document.getElementById("temp").textContent = Math.round(data.main.temp) + "° F";
         document.getElementById("wind").textContent = data.wind.speed + " MPH";
-
+            //CyLuvsKat//
         if (data.weather[0].main == "Clouds") {
             weatherIcon.src = "./assets/clouds.png";
         } else if (data.weather[0].main == "Clear") {
