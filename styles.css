@@ -3,7 +3,7 @@
     --color-sec: #d6d6d6;
     --color-ter: #FFFFFF;
     --color-acc: #000000;
-    --color-hov1: #e7e7e7;
+    --color-hov1: #f1ecec;
     --color-hov2: #ffffffc5;
 }
 
@@ -54,6 +54,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
 }
 
@@ -66,7 +67,7 @@ body {
 
 h1 {
     font-family: "Josefin Slab", serif;
-    font-size: 3vw;
+    font-size: 4.5em;
     color: var(--color-pri);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     padding-left: 10%;
@@ -123,6 +124,15 @@ p {
 }
 
 
+.main {
+    overflow: scroll;
+}
+
+
+.main::-webkit-scrollbar {
+    display: none;
+}
+
 #sectionA {
     width: 50%;
     height: 100%;
@@ -133,19 +143,63 @@ p {
     overflow: scroll;
 }
 
+#sectionA::-webkit-scrollbar {
+    display: none;
+}
+
 #sectionA:hover {
     background-color: var(--color-hov1);
 }
 
-
-::-webkit-scrollbar {
-    width: 12px;
+section .p1, .p3 {
+    text-indent: 20px;
 }
+
+section p a {
+    color: var(--color-pri);
+    position: relative;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+
+section p a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 25%;
+    transform: translateY(-25%);
+    width: 8px;
+    height: 8px;
+    background: url(./assets/external-link-52.png) no-repeat center center;
+    background-size: contain;
+}
+
+section ul, ol {
+    line-height: 1.5;
+}
+section li {
+    font-family: "Josefin Slab", serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+section ol a {
+    font-family: "Josefin Slab", serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-pri)
+}
+
 
 aside {
     width: 25%;
     height: 100%;
     padding: 10px;
+    overflow: scroll;
+}
+
+aside::-webkit-scrollbar {
+    display: none;
 }
 
 aside:hover {
@@ -182,8 +236,20 @@ aside a li {
     font-family: "Josefin Slab", serif;
     font-size: 2rem;
     font-weight: 500;
-
 }
+
+aside a li:hover {
+    color: var(--color-acc);
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+
+aside a:hover {
+    color: var(--color-acc);
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+
 
 nav {
     width: 25%;
@@ -192,6 +258,10 @@ nav {
     flex-direction: column;
     justify-content: center;
     overflow: scroll;
+}
+
+nav::-webkit-scrollbar {
+    display: none;
 }
 
 nav:hover {
@@ -226,6 +296,11 @@ nav:hover {
     border: 2px solid var(--color-acc);
     transform: scale(1.08);
     transition: .2s;
+    box-shadow: 3px 3px 6px var(--color-acc);
+}
+
+.navlist a:active {
+    transform: translateY(4px)
 }
 
 .navlist a:hover li {
