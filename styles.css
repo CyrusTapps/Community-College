@@ -258,6 +258,17 @@ section p a::after {
     background-size: contain;
 }
 
+section p a:hover {
+    font-size: 13px;
+    transform:translateY(2px);
+    transition: .2s;
+}
+
+section p a:active {
+    font-size: 14px;
+    color: var(--color-acc);
+}
+
 section ul,
 ol {
     line-height: 1.5;
@@ -274,6 +285,16 @@ section ol a {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--color-pri)
+}
+
+section ol a:hover {
+    font-size: 1.6rem;
+    transform:translateY(2px);
+    transition: .2s;
+}
+
+section ol a:active {
+    color: var(--color-acc);
 }
 
 
