@@ -1,14 +1,15 @@
-const apiKey = "752a802622ba8d12cd6c6d18438a7291";
+const apiKey = "";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=";
-const weatherIcon = document.querySelector(".weather-icon");
+const weatherIcon = document.getElementById("weather-icon");
 const city = "Nashville";
     
 async function checkWeather(city) {
-    const response = await fetch("https://api.openweathermap.org/data/2.5/weather?units=imperial&q=nashville&appid=752a802622ba8d12cd6c6d18438a7291");
+    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
 
-    if (response.status == 404) {
-        document.querySelector(".error").style.display = "block";
-        document.querySelector(".weather").style.display = "none";
+
+    if (response.status == 404 || response.status == 401) {
+        document.getElementById("temp").textContent = "Error";
+        document.getElementById("wind").textContent = "Error";
     } else {
         var data = await response.json();
 
