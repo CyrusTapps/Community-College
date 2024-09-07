@@ -18,7 +18,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="./styles.css">
-    <!-- <script type="module" src="./script.js" defer></script> -->
+    <script type="module" src="./script.js" defer></script>
 
 </head>
 
@@ -27,17 +27,43 @@
         <header class="header">
             <img class="logo" src="./assets/logo.jpg">
             <h1>Cyrus Community College</h1>
-            <div class="space"></div>
+            <div class="weather">
+                <div class="city">
+                    <p>Nashville</p>
+                </div>
+                <div class="tempD">
+                    <p id="temp"></p>
+                </div>
+                <div class="wxbtm">
+                    <div class="wximg">
+                        <img src="assets/rain.png" class="weather-icon">
+                    </div>
+                    <div class="wxbtmB">
+                        <div class="windtxt"><p>Wind</p></div>
+                        <div class="windD"><p id="wind"></p></div>
+                    </div>
+                </div>
+
+            </div>
 
         </header>
         <main class="main">
             <section class="section" id="sectionA">
                 <h2>It's a Brave New World</h2>
-                <p class="p1">It's a brave new world out there. Our children are being put in increasingly more competitive situations, both during recreation, and as they start to move into the adult world of <a href="null">examinations</a>, <a href="null">jobs</a>, <a href="null">careers</a>, and other life choices. Having the wrong mindset, becoming <a href="null">too emotional</a>, or making the wrong choices can contribute to them experiencing difficulty in taking their rightful place in today's ideal society.</p><br>
-                <p class="p2">As concerned parents, guardians or carers, you will no doubt want to give your children the best possible start in life — and you've come to the right place.</p><br>
+                <p class="p1">It's a brave new world out there. Our children are being put in increasingly more
+                    competitive situations, both during recreation, and as they start to move into the adult world of <a
+                        href="null">examinations</a>, <a href="null">jobs</a>, <a href="null">careers</a>, and other
+                    life choices. Having the wrong mindset, becoming <a href="null">too emotional</a>, or making the
+                    wrong choices can contribute to them experiencing difficulty in taking their rightful place in
+                    today's ideal society.</p><br>
+                <p class="p2">As concerned parents, guardians or carers, you will no doubt want to give your children
+                    the best possible start in life — and you've come to the right place.</p><br>
 
                 <h2>The best start in life</h2>
-                <p class="p3">At St. Huxley's, we pride ourselves in not only giving our students a top quality education, but also giving them the societal and emotional intelligence they need to win big in the coming utopia. We not only excel at subjects such as genetics, data mining, and chemistry, but we also include compulsory lessons in:</p><br>
+                <p class="p3">At St. Huxley's, we pride ourselves in not only giving our students a top quality
+                    education, but also giving them the societal and emotional intelligence they need to win big in the
+                    coming utopia. We not only excel at subjects such as genetics, data mining, and chemistry, but we
+                    also include compulsory lessons in:</p><br>
                 <ul>
                     <li>Emotional Control</li>
                     <li>Judgement</li>
@@ -54,60 +80,75 @@
             <aside class="aside" id="aside">
                 <h2>Top Course Choices</h2>
                 <ul>
-                    <a href="https://www.amazon.com/Underwater-Basket-Weaving-Continuing-Education/dp/1507828780#:~:text=Underwater%20Basket%20Weaving%20is%20a%20slightly%20skewed%2C,enrichment%20courses%2C%20self%2Ddirected%20learning%2C%20informal%20lab%20classes%2C" class="asidelink" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.amazon.com/Underwater-Basket-Weaving-Continuing-Education/dp/1507828780#:~:text=Underwater%20Basket%20Weaving%20is%20a%20slightly%20skewed%2C,enrichment%20courses%2C%20self%2Ddirected%20learning%2C%20informal%20lab%20classes%2C"
+                        class="asidelink" target="_blank" rel="noopener noreferrer">
                         <li class="asidelist">Genetic Engineering</li>
                     </a>
-                    <a href="https://www.thrillist.com/drink/nation/college-beer-and-wine-programs-cornell-wine-courses-uc-davis-beer-and-wine-classes-and-more-thrillist-nation" class="asidelink" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.thrillist.com/drink/nation/college-beer-and-wine-programs-cornell-wine-courses-uc-davis-beer-and-wine-classes-and-more-thrillist-nation"
+                        class="asidelink" target="_blank" rel="noopener noreferrer">
                         <li class="asidelist">Genetic Mutation</li>
                     </a>
-                    <a href="https://www.theguardian.com/music/2014/mar/28/miley-cyrus-university-course-sociology-new-york" class="asidelink" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.theguardian.com/music/2014/mar/28/miley-cyrus-university-course-sociology-new-york"
+                        class="asidelink" target="_blank" rel="noopener noreferrer">
                         <li class="asidelist">Organic Chemistry</li>
                     </a>
-                    <a href="https://www.nas.org/blogs/article/how_to_win_a_beauty_pageant_-_no_comment" class="asidelink" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.nas.org/blogs/article/how_to_win_a_beauty_pageant_-_no_comment"
+                        class="asidelink" target="_blank" rel="noopener noreferrer">
                         <li class="asidelist">Pharmaceuticals</li>
                     </a>
-                    <a href="https://sfhp.ehe.osu.edu/sport-for-the-spectator/" class="asidelink" target="_blank" rel="noopener noreferrer">
+                    <a href="https://sfhp.ehe.osu.edu/sport-for-the-spectator/" class="asidelink" target="_blank"
+                        rel="noopener noreferrer">
                         <li class="asidelist">Biochemistry with behaviour</li>
                     </a>
-                    <a href="http://catalog.montclair.edu/coursesaz/tvdm/" class="asidelink" target="_blank" rel="noopener noreferrer">
+                    <a href="http://catalog.montclair.edu/coursesaz/tvdm/" class="asidelink" target="_blank"
+                        rel="noopener noreferrer">
                         <li class="asidelist">Pure biochemistry</li>
                     </a>
-                    <a href="https://pr.princeton.edu/pwb/01/1112/3a.shtml" class="asidelink" target="_blank" rel="noopener noreferrer">
+                    <a href="https://pr.princeton.edu/pwb/01/1112/3a.shtml" class="asidelink" target="_blank"
+                        rel="noopener noreferrer">
                         <li class="asidelist">Data mining</li>
                     </a>
-                    <a href="https://centre.smartcatalogiq.com/en/2021-2022/catalog/course-descriptions/fys-first-year-studies/100/fys-109/" class="asidelink" target="_blank" rel="noopener noreferrer">
+                    <a href="https://centre.smartcatalogiq.com/en/2021-2022/catalog/course-descriptions/fys-first-year-studies/100/fys-109/"
+                        class="asidelink" target="_blank" rel="noopener noreferrer">
                         <li class="asidelist">Computer security</li>
                     </a>
-                    <a href="https://www.huffpost.com/entry/occidental-college-offers_n_267202" class="asidelink" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.huffpost.com/entry/occidental-college-offers_n_267202" class="asidelink"
+                        target="_blank" rel="noopener noreferrer">
                         <li class="asidelist">Bioinformatics</li>
                     </a>
-                    <a href="https://explorecourses.stanford.edu/search?q=COMM166" class="asidelink" target="_blank" rel="noopener noreferrer">
+                    <a href="https://explorecourses.stanford.edu/search?q=COMM166" class="asidelink" target="_blank"
+                        rel="noopener noreferrer">
                         <li class="asidelist">Cybernetics</li>
                     </a>
-
+                        <!-- CyLuvsKat -->
                 </ul>
                 <p>
                     <a href="https://bestlifeonline.com/funniest-college-courses/" class="asidelink">See more</a>
                 </p>
-            </aside>
+            </aside> 
             <nav class="nav">
                 <ul class="navlist">
                     <a href="https://google.com" class="btnlink" target="_blank" rel="noopener noreferrer">
                         <li class="btn">Home</li>
                     </a>
-                    <a href="https://medium.com/@realbrickroad1/wheres-waldo-40e77172fa2f" class="btnlink" target="_blank" rel="noopener noreferrer">
+                    <a href="https://medium.com/@realbrickroad1/wheres-waldo-40e77172fa2f" class="btnlink"
+                        target="_blank" rel="noopener noreferrer">
                         <li class="btn">Finding Us</li>
                     </a>
-                    <a href="https://bestlifeonline.com/funniest-college-courses/" class="btnlink" target="_blank" rel="noopener noreferrer">
+                    <a href="https://bestlifeonline.com/funniest-college-courses/" class="btnlink" target="_blank"
+                        rel="noopener noreferrer">
                         <li class="btn">Courses</li>
                     </a>
-                    <a href="https://www.theatlantic.com/magazine/archive/2017/04/professor-caveman/517815/" class="btnlink" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.theatlantic.com/magazine/archive/2017/04/professor-caveman/517815/"
+                        class="btnlink" target="_blank" rel="noopener noreferrer">
                         <li class="btn">Staff</li>
                     </a>
-                    <a href="https://www.youtube.com/@ozzymanreviews" class="btnlink" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.youtube.com/@ozzymanreviews" class="btnlink" target="_blank"
+                        rel="noopener noreferrer">
                         <li class="btn">Media</li>
                     </a>
-                    <a href="https://en.wikipedia.org/wiki/Prospectus_(university)#:~:text=A%20university%20or%20school%20prospectus,benefits%20of%20accepting%20a%20place." class="btnlink" target="_blank" rel="noopener noreferrer">
+                    <a href="https://en.wikipedia.org/wiki/Prospectus_(university)#:~:text=A%20university%20or%20school%20prospectus,benefits%20of%20accepting%20a%20place."
+                        class="btnlink" target="_blank" rel="noopener noreferrer">
                         <li class="btn">Prospectus</li>
                     </a>
 
