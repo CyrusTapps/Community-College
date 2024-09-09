@@ -27,6 +27,27 @@
     font-size: 10px;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bkgd1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-ter);
+    border-radius: 5px;
+    height:30px;
+    width:30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-sec);
+
+}
+
 body {
     background: var(--color-pri);
     margin: 0;
@@ -59,7 +80,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow:hidden;
 
 }
 
@@ -227,7 +248,7 @@ p {
 }
 
 .main {
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .main::-webkit-scrollbar {
@@ -241,11 +262,7 @@ p {
     flex-direction: column;
     background: var(--color-bkgd1);
     padding: 10px;
-    overflow: scroll;
-}
-
-#sectionA::-webkit-scrollbar {
-    display: none;
+    overflow: auto;
 }
 
 #sectionA:hover {
@@ -337,12 +354,8 @@ aside {
     width: 25%;
     height: 100%;
     padding: 10px;
-    overflow: scroll;
+    overflow: auto;
     line-height: 1.25;
-}
-
-aside::-webkit-scrollbar {
-    display: none;
 }
 
 aside:hover {
@@ -404,11 +417,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: scroll;
-}
-
-nav::-webkit-scrollbar {
-    display: none;
+    overflow:auto;
 }
 
 nav:hover {
@@ -470,12 +479,6 @@ nav:hover {
         font-size: 2vw;
         line-height: 2;
     }
-
-    /* aside li a::before {
-        width: 8px;
-        height: 8px;
-        top: 25%;
-    } */
 }
 
 @media (max-width:900px) {
@@ -491,6 +494,15 @@ nav:hover {
 
     aside a {
         font-size: 1rem;
+    }
+}
+
+@media (max-height:643px) {
+    .logo, .weather {
+        display: none;
+    }
+    nav {
+        padding-top: 5%;
     }
 }
 
