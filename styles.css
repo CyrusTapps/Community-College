@@ -1,10 +1,12 @@
 :root {
-    --color-pri: #61293c;
-    --color-sec: #d6d6d6;
-    --color-ter: #FFFFFF;
-    --color-acc: #000000;
-    --color-hov1: #f1ecec;
-    --color-hov2: #ffffffc5;
+    --color-pri: #1b4e69;
+    --color-sec: #5a0e27;
+    --color-ter: #d6dadb;
+    --color-acc: black;
+    --color-acc2: #697173;
+    --color-bkgd1: #f5f5f5;
+    --color-hov1: #f0f0f7;
+    --color-hov2: silver;
 }
 
 .josefin-slab-heading {
@@ -37,20 +39,23 @@ body {
 }
 
 .container {
-    width: 100%;
-    height: 100%;
+    width: 99%;
+    height: 99%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: var(--color-bkgd1);
 }
 
 .header {
-    width: 99%;
+    width: 100%;
     height: 20%;
-    background-color: var(--color-sec);
-    border-top: 3px solid var(--color-pri);
-    border-bottom: 3px solid var(--color-pri);
+    border-top: 3px solid var(--color-sec);
+    background: linear-gradient(to bottom,
+            rgba(90, 14, 39, 0.5),
+            var(--color-bkgd1) 20%);
+    border-bottom: 3px solid var(--color-sec);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,18 +72,29 @@ body {
 
 h1 {
     font-family: "Josefin Slab", serif;
-    font-size: 4.5em;
+    font-size: 4.8em;
     color: var(--color-pri);
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-shadow:
+        3px 3px 7px rgba(90, 14, 39, 0.7),
+        /* RGB value of var(--color-sec) */
+        1px 1px 0 white,
+        -1px -1px 0 var(--color-acc2),
+        1px -1px 0 var(--color-acc2),
+        -1px 1px 0 var(--color-acc2);
     padding-left: 10%;
     padding-right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
 
 }
 
 .weather {
     width: 11%;
     height: 100%;
-    background-color: white;
+    background: var(--color-bkgd1);
     margin-left: 10%;
     margin-right: 2%;
     display: flex;
@@ -91,10 +107,13 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--color-sec);
-    border-bottom: 1px solid var(--color-pri);
+    background: linear-gradient(to bottom,
+            rgba(90, 14, 39, 0.5),
+            var(--color-bkgd1));
+    border-bottom: 1px solid var(--color-sec);
     z-index: 1;
 }
+
 /* CyLuvsKat */
 .city p {
     font-family: "Lora", serif;
@@ -109,7 +128,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--color-sec);
+    background: var(--color-bkgd1);
     z-index: 1;
 }
 
@@ -127,7 +146,7 @@ h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: var(--color-sec);
+    background: var(--color-bkgd1);
 }
 
 .wximg {
@@ -169,6 +188,8 @@ h1 {
 h2 {
     font-family: "Josefin Slab", serif;
     font-size: 2vw;
+    color: var(--color-sec);
+    text-shadow: 1px 1px 2px var(--color-pri);
 }
 
 p {
@@ -176,13 +197,13 @@ p {
     font-weight: 800;
     line-height: 1.5;
     letter-spacing: 2px;
-    color: var(--color-acc);
+    color: var(--color-pri);
 }
 
 @media (max-width: 999px) {
 
     .logo,
-    .space {
+    .weather {
         display: none;
     }
 
@@ -193,24 +214,21 @@ p {
     h2 {
         font-size: 20px;
     }
+
+    
 }
 
-
-
-
 .main {
-    width: 99%;
+    width: 100%;
     height: 71%;
-    background-color: var(--color-sec);
+    background-color: var(--color-bkgd1);
     display: flex;
     flex-direction: row;
 }
 
-
 .main {
     overflow: scroll;
 }
-
 
 .main::-webkit-scrollbar {
     display: none;
@@ -221,7 +239,7 @@ p {
     height: 100%;
     display: flex;
     flex-direction: column;
-    background: var(--color-sec);
+    background: var(--color-bkgd1);
     padding: 10px;
     overflow: scroll;
 }
@@ -259,14 +277,23 @@ section p a::after {
 }
 
 section p a:hover {
-    font-size: 13px;
-    transform:translateY(2px);
+    font-size: 11px;
+    transform: translateY(2px);
     transition: .2s;
+    color: var(--color-sec);
+    text-decoration: none;
+}
+
+section p a:focus {
+    outline: 1px solid orange;
+    outline-offset: 2px;
+    font-size: 1rem;
+    text-decoration: none;
 }
 
 section p a:active {
-    font-size: 14px;
-    color: var(--color-acc);
+    font-size: 13px;
+    color: var(--color-acc2);
 }
 
 section ul,
@@ -289,20 +316,29 @@ section ol a {
 
 section ol a:hover {
     font-size: 1.6rem;
-    transform:translateY(2px);
+    transform: translateY(2px);
     transition: .2s;
+    color: var(--color-sec);
+    text-decoration: none;
 }
 
 section ol a:active {
-    color: var(--color-acc);
+    color: var(--color-acc2);
+    font-size: 1.7rem;
 }
 
+section ol a:focus {
+    outline: 1px solid orange;
+    outline-offset: 2px;
+    font-size: 1.7rem;
+}
 
 aside {
     width: 25%;
     height: 100%;
     padding: 10px;
     overflow: scroll;
+    line-height: 1.25;
 }
 
 aside::-webkit-scrollbar {
@@ -318,45 +354,49 @@ aside ul {
     padding-left: 0;
 }
 
-aside a li {
+aside li a {
     position: relative;
-    padding-left: 30px;
+    padding-left: 20px;
     margin-bottom: 10px;
 }
 
-aside a li::before {
+aside li a::before {
     content: "";
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 16px;
-    height: 16px;
+    width: 1vw;
+    height: 1vw;
     background: url(./assets/bullet-2.png) no-repeat center center;
     background-size: contain;
 }
 
-
-aside a,
-aside a li {
+aside a {
     color: var(--color-pri);
     font-family: "Josefin Slab", serif;
     font-size: 2rem;
     font-weight: 500;
 }
 
-aside a li:hover {
-    color: var(--color-acc);
-    font-size: 2.1rem;
-    font-weight: 600;
-}
-
 aside a:hover {
-    color: var(--color-acc);
+    color: var(--color-sec);
     font-size: 2.1rem;
     font-weight: 600;
+    text-decoration: none;
+    transition: .2s;
 }
 
+aside a:active {
+    color: var(--color-acc2);
+    font-size: 2.2rem;
+}
+
+aside a:focus {
+    outline: 1px solid orange;
+    outline-offset: 2px;
+    font-size: 2.3rem;
+}
 
 nav {
     width: 25%;
@@ -375,7 +415,6 @@ nav:hover {
     background-color: var(--color-hov1);
 }
 
-
 .navlist a {
     background: var(--color-ter);
     width: 60%;
@@ -383,7 +422,7 @@ nav:hover {
     margin-top: 10px;
     margin-left: 15%;
     list-style: none;
-    border: 2px solid var(--color-pri);
+    border: 2px solid var(--color-sec);
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -399,7 +438,7 @@ nav:hover {
 }
 
 .navlist a:hover {
-    background: var(--color-pri);
+    background: var(--color-sec);
     border: 2px solid var(--color-acc);
     transform: scale(1.08);
     transition: .2s;
@@ -407,13 +446,15 @@ nav:hover {
 }
 
 .navlist a:active {
-    transform: translateY(4px)
+    transform: translateY(4px);
+    background: var(--color-pri);
 }
 
-.navlist a:hover li {
-    color: var(--color-hov2)
+.navlist a:hover {
+    li {
+        color: var(--color-hov1);
+    }
 }
-
 
 @media (max-width: 999px) {
     .btn {
@@ -424,6 +465,17 @@ nav:hover {
     .navlist a li {
         font-size: 20px;
     }
+
+    aside a {
+        font-size: 2vw;
+        line-height: 2;
+    }
+
+    /* aside li a::before {
+        width: 8px;
+        height: 8px;
+        top: 25%;
+    } */
 }
 
 @media (max-width:900px) {
@@ -436,14 +488,16 @@ nav:hover {
     .navlist a li {
         font-size: 10px;
     }
+
+    aside a {
+        font-size: 1rem;
+    }
 }
 
-
-
 .footer {
-    width: 99%;
+    width: 100%;
     height: 8%;
-    background-color: var(--color-sec);
+    background-color: var(--color-bkgd1);
     border-top: 3px solid var(--color-pri);
     display: flex;
     align-items: center;

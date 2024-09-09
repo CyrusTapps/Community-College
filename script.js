@@ -1,4 +1,4 @@
-const apiKey = "";
+const apiKey = "752a802622ba8d12cd6c6d18438a7291";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=";
 const weatherIcon = document.getElementById("weather-icon");
 const city = "Nashville";
